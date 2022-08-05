@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/app_bar"
+        layout="@layout/app_bar">
+    </include>
+
+    <ScrollView
+        android:layout_height="match_parent"
+    android:layout_width="match_parent" >
+
+    <android.widget.RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="com.example.cookbook.DetailActivity"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/detail_recipe_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="title sample"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display2"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/detail_recipe_desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/detail_recipe_title"
+            android:paddingTop="16dp"
+            android:text="description sample"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+        <TextView
+            android:id="@+id/ingredient_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/detail_recipe_desc"
+            android:paddingTop="16dp"
+            android:text="Ingredients:"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/detail_recipe_ingredients"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ingredient_title"
+            android:text="Ingredient filler \nIngredient filler \nIngredient filler"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/recipe_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/detail_recipe_ingredients"
+            android:paddingTop="16dp"
+            android:text="Recipe:"
+            android:textAllCaps="false"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/detail_recipe_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/recipe_label"
+            android:text="content sample"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/ingredient_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="vertical"
+            android:layout_below="@id/detail_recipe_content" />
+
+    </android.widget.RelativeLayout>
+    </ScrollView>
+</LinearLayout>

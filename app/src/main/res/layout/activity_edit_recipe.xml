@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.widget.RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    tools:context=".EditRecipeActivity"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/app_bar"
+        layout="@layout/app_bar">
+    </include>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp"
+        android:layout_below="@id/app_bar">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/change_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Edit Title"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <EditText
+                android:id="@+id/change_edit_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/change_title"
+                android:ems="10"
+                android:hint="Enter Recipe Name"
+                android:inputType="textMultiLine"
+                android:text="" />
+
+            <TextView
+                android:id="@+id/change_desc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/change_edit_name"
+                android:paddingTop="32dp"
+                android:text="Edit Description" />
+
+            <EditText
+                android:id="@+id/change_edit_desc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Enter the description"
+                android:inputType="textMultiLine"
+                android:text=""
+                android:layout_below="@id/change_desc" />
+
+            <TextView
+                android:id="@+id/change_ingredients"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="32dp"
+                android:text="Edit Ingredients"
+                android:layout_below="@id/change_edit_desc"/>
+
+            <EditText
+                android:id="@+id/change_edit_ingredients"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Edit the ingredients"
+                android:inputType="textMultiLine"
+                android:text=""
+                android:layout_below="@id/change_ingredients"/>
+
+            <TextView
+                android:id="@+id/change_content_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/change_edit_ingredients"
+                android:paddingTop="32dp"
+                android:text="Edit Recipe" />
+
+
+
+            <EditText
+                android:id="@+id/change_edit_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/change_content_title"
+                android:inputType="textMultiLine"
+                android:text=""
+                android:hint="Enter the Recipe"/>
+
+            <Button
+                android:id="@+id/submit_changes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/change_edit_content"
+                android:layout_centerHorizontal="true"
+                android:onClick="SubmitChanges"
+                android:text="Add Changes" />
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</android.widget.RelativeLayout>
